@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+<style>
+body {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	background: url("https://i.imgur.com/J9Z3yk9.jpg");
+}
+h1 {
+	font-family: 'Bangers', cursive;
+	font-size: 75px;
+	text-align: center;
+	color: cyan;
+}
+h2 {
+	font-family: 'Bangers', cursive;
+	font-size: 35px;
+	text-align: center;
+	color: magenta;
+}
+p {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 25px;
+	text-align: center;
+	color: white;
+}
+ul {
+	font-family: "Open Sans Condensed", sans-serif;
+	font-size: 30px;
+	position: center;
+	color: white
+}
+img {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px;
+	width: 300px;
+}
+
+</style>
+
+<body>
+<h1>Jeremy Veltre</h1>
+
+<img name="slide" width="300" height="400" />
+
+<h2>About Me</h2>
+<p>
+Hi,I'm Jeremy! I am really excited to enter the world of coding and begin the journey toward a career in Software Engineering. Prior to this, I was a Hairstylist at a pretigious salon in Atlanta, Ga; before that a Makeup Artist for luxury cosmetic brands. Currently I am one of the Co-Directors of Entertainment at Mary's in East Atlanta Village, fancy way of saying I am one of the Drag Queens that runs the shows. 
+</p>
+<p>
+The world is weird now dur to Covid-19 and since I have had the luxury of time at home from the pandemic, I started to practice some coding modules I have found on the internet. I have been really taken by surprise how much I enjoy the challenges that I have faced in these course and the amazing things you can create lines of code. I never thought I would find this to be a new creative medium and career path!
+</p>
+<h2>Contact Info</h2>
+<p>
+	<ul style="list-style: none;">
+		<li>Cell: 404.987.3667 	</li>
+		<li>Email: jeremyveltre13@gmail.com 	</li>
+		<li>Instagram: @Frankie_is_terrible</li>
+    </ul>
+</p>
+</body>
+
+<script>
+	var i = 0; //start point
+	var images = []; // images array
+	var time = 3000; // time between switch
+
+	//image list
+	images[0] = "https://i.imgur.com/OxSVzBI.jpg";
+	images[1] = "https://i.imgur.com/87wzfM4.jpg";
+	images[2] = "https://i.imgur.com/YoU8hB1.jpg";
+	images[3] = "https://i.imgur.com/qS7bUDv.jpg";
+	images[4] = "https://i.imgur.com/SrJZ0SZ.jpg";
+	images[5] = "https://i.imgur.com/POpuDTG.jpg";
+	images[6] = "https://i.imgur.com/6syJT65.jpg";
+
+	//change image
+	function changeImg() {
+		document.slide.src = images[i];
+
+		if(i < images.length - 1){
+			//add 1 to Index
+			i++;
+		} else {
+			// Reset back to 0
+			i = 0;
+		}
+		// Run function every X seconds
+
+		setTimeout("changeImg()", time);
+	}
+	//Run function when page loads
+	window.onload = changeImg;
+
+</script>	
+
